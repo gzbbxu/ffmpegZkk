@@ -53,6 +53,101 @@ find_library( # Sets the name of the path variable.
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
+add_library( fdk-aac
+        STATIC
+        IMPORTED )
+set_target_properties( fdk-aac
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libfdk-aac.a )
+
+add_library( x264
+        STATIC
+        IMPORTED )
+set_target_properties( x264
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libx264.a )
+
+add_library( avcodec
+        STATIC
+        IMPORTED )
+set_target_properties( avcodec
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavcodec.a )
+
+
+add_library( avdevice
+        STATIC
+        IMPORTED )
+set_target_properties( avdevice
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavdevice.a )
+
+
+add_library( avfilter
+        STATIC
+        IMPORTED )
+set_target_properties( avfilter
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavfilter.a )
+
+
+
+add_library( avformat
+        STATIC
+        IMPORTED )
+set_target_properties( avformat
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavformat.a )
+
+
+
+add_library( avresample
+        STATIC
+        IMPORTED )
+set_target_properties( avresample
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavresample.a )
+
+add_library( avutil
+        STATIC
+        IMPORTED )
+set_target_properties( avutil
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libavutil.a )
+
+
+
+add_library( postproc
+        STATIC
+        IMPORTED )
+set_target_properties( postproc
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libpostproc.a )
+
+
+add_library( swresample
+        STATIC
+        IMPORTED )
+set_target_properties( swresample
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libswresample.a )
+
+
+
+
+add_library(  swscale
+        STATIC
+        IMPORTED )
+set_target_properties( swscale
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libswscale.a )
+
+add_library( opencv_java4
+        STATIC
+        IMPORTED )
+set_target_properties( opencv_java4
+        PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libopencv_java4.so)
 
 target_link_libraries( # Specifies the target library.
         myffmpeg
